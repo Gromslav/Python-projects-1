@@ -1,0 +1,13 @@
+#This code writes a text in a current window. The text is taken from 'source.txt' file, which has to be created first.
+#Useful script when traditional copy-paste does not work (CTRL+C and CTRL+V).
+#note that you have to have pyautogui module installed in your IDE to run the script.
+
+#Imports the libaries needed
+import pyautogui
+import time
+
+#Opens the file in mode 'read' and after 3 seconds reads the text in the file and writes it in the open window.
+f = open("source.txt", 'r')
+time.sleep(3)
+text = (f.read())
+pyautogui.typewrite(text)
